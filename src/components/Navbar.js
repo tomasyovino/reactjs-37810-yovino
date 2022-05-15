@@ -1,3 +1,5 @@
+import navlist from '../Assets/Images/nav-list.png';
+import logo from '../Assets/Images/logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 
@@ -13,7 +15,7 @@ const Navbar = () => {
                 <ul className="navbar-nav">
                     <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src='#' alt='Nav-list' />
+                        <img src={navlist} alt='Nav-list' />
                     </a>
                     <ul className="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
                         <li><a className="dropdown-item text-white" href="#">Inicio</a></li>
@@ -27,7 +29,7 @@ const Navbar = () => {
                 <a className="navbar-brand text-white" href="#">¡Pedí Ahora!</a>
                 </div>
             </div>
-            <a className="navbar-brand" href="#"><img src='#' alt='Logo' /></a>
+            <a className="navbar-brand" href="#"><img src={logo} alt='Logo' /></a>
             </nav>
         </header>
     );
