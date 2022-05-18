@@ -6,7 +6,7 @@
 
 .Header{
   background-color: #FF090C;
-  min-width: 100vh;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -15,19 +15,16 @@
   color: white;
 }
 
-.dropdown-menu{
-  background-color: #FF090C !important;
-}
-
-.Header{
-  padding: 20px;
-}
-
 .navbar{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  min-width: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.dropdown-menu{
+  background-color: #FF090C !important;
 }
 /* 
 
