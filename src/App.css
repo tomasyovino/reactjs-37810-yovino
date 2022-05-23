@@ -26,6 +26,36 @@
 .dropdown-menu{
   background-color: #FF090C !important;
 }
+
+.ItemListContainer{
+  display: flex;
+  margin-top: 1.25em;
+}
+
+.product-container{
+  margin: auto;
+  text-align: center;
+}
+
+.product-counter{
+  display: flex;
+  align-items: center;
+  height: 30px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+
+.counter-button{
+  padding: 0 10px;
+  color: cornflowerblue;
+  background-color: white;
+  border: none;
+}
+
+.counter-p{
+  margin: 0;
+  padding: 0 30px;
+}
 /* 
 
 
