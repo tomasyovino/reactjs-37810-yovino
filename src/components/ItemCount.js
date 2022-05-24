@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const Producto = ({stock, initial}) => {
+const Producto = ({name, stock, initial}) => {
     const [count, setCount] = useState(initial);
 
     const increment = () => {
@@ -12,12 +12,12 @@ const Producto = ({stock, initial}) => {
     }
 
     const onAdd = () => {
-        alert("Agregaste: " + count + " productos");
+        alert("¡Agregaste " + count + " " + name + " a la carrera!");
     }
 
     return (
         <div className='product-container'>
-            <h3>Producto</h3>
+            <h3>{name}</h3>
             <div className='product-counter'>
             <button className='counter-button' onClick={decrease}>-</button>
             <p className='counter-p'>{count}</p>
