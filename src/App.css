@@ -24,7 +24,7 @@
 }
 
 .dropdown-menu{
-  background-color: #FF090C !important;
+  background-color: #FF090C;
 }
 
 .ItemListContainer{
@@ -55,6 +55,19 @@
 .counter-p{
   margin: 0;
   padding: 0 30px;
+}
+
+.btn-addToCart{
+  color: white;
+  background-color: cornflowerblue;
+  margin-top: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.disabled{
+  opacity: 85%;
 }
 /* 
 

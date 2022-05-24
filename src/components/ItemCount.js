@@ -1,14 +1,18 @@
 import { useState } from 'react';
 
-const Producto = (props) => {
-    const [valoraciones, setValoraciones] = useState(0);
+const Producto = ({stock, initial}) => {
+    const [count, setCount] = useState(initial);
 
     const increment = () => {
-        if (valoraciones < 5) setValoraciones(valoraciones+1)
+        if (count < (stock)) setCount(count+1);
     }
 
     const decrease = () => {
-        if (valoraciones > 0) setValoraciones(valoraciones-1)
+        if (count > (initial)) setCount(count-1);
+    }
+
+    const onAdd = () => {
+        alert("Agregaste: " + count + " productos");
     }
 
     return (
@@ -16,9 +20,14 @@ const Producto = (props) => {
             <h3>Producto</h3>
             <div className='product-counter'>
             <button className='counter-button' onClick={decrease}>-</button>
-            <p className='counter-p'>{valoraciones}</p>
+            <p className='counter-p'>{count}</p>
             <button className='counter-button' onClick={increment}>+</button>
             </div>
+            {
+                stock
+                    ? <button className="btn-addToCart" onClick={onAdd}>Agregar al carrito</button>
+                    : <button className="btn-addToCart disabled" disabled>Agregar al carrito</button>
+            }
         </div>
     );
 }
