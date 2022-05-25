@@ -1,35 +1,38 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-const Producto = ({name, stock, initial}) => {
+const ItemCount = ({stock, initial}) => {
     const [count, setCount] = useState(initial);
 
+    useEffect(() => {
+        setCount(initial);
+    },[]);
+
     const increment = () => {
-        if (count < (stock)) setCount(count+1);
+        if (count < (stock)) setCount(count + 1);
     }
 
     const decrease = () => {
-        if (count > (initial)) setCount(count-1);
+        if (count > (initial)) setCount(count - 1);
     }
 
-    const onAdd = () => {
-        alert("¡Agregaste " + count + " " + name + " a la carrera!");
+    const onAdd = (qty) => {
+        alert("You have selected " + qty + " items.");
     }
 
     return (
         <div className='product-container'>
-            <h3>{name}</h3>
             <div className='product-counter'>
-            <button className='counter-button' onClick={decrease}>-</button>
-            <p className='counter-p'>{count}</p>
-            <button className='counter-button' onClick={increment}>+</button>
+                <button className='counter-button' onClick={decrease}>-</button>
+                <p className='counter-p'>{count}</p>
+                <button className='counter-button' onClick={increment}>+</button>
             </div>
             {
                 stock
-                    ? <button className="btn-addToCart" onClick={onAdd}>Agregar al carrito</button>
+                    ? <button className="btn-addToCart" onClick={() => onAdd(count)}>Agregar al carrito</button>
                     : <button className="btn-addToCart disabled" disabled>Agregar al carrito</button>
             }
         </div>
     );
 }
 
-export default Producto;
+export default ItemCount;

@@ -4,32 +4,104 @@
   box-sizing: border-box;
 }
 
-.Header{
+.header{
   background-color: #FF090C;
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: start;
+  padding: 20px 0;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .navbar{
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  margin: 0 50px;
 }
 
-.dropdown-menu{
+.left-container{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#order-now{
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  background-color: black;
+  padding: 3px 10px;
+  border-radius: 30px;
+}
+#order-now:hover{
+  transform: scale(1.1);
+  transition: all .2s ease;
+  box-shadow: 2px 0 5px 2px rgb(66,66,66);
+}
+
+#icon-menu{
+  cursor: pointer;
+  position: relative;
+  margin-left: 20px;
+  z-index: 6;
+  font-size: 45px;
+}
+
+.cont-menu{
   background-color: #FF090C;
+  box-shadow: 2px 0 5px 2px rgb(66,66,66);
+  width: 400px;
+  border-radius: 10px;
+  height: 80vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .5s ease;
+  z-index: 5;
+}
+
+.cont-menu ul{
+  padding: 100px 0 20px 0;
+  list-style: none;
+}
+
+.cont-menu ul li{
+  padding: 10px 50px;
+  margin: 0 20px;
+  text-align: center;
+  border-bottom: white solid 3px;
+}
+
+.cont-menu ul li a{
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  font-weight: bolder;
+}
+
+.cont-menu ul li:hover{
+  background-color: white;
+}
+.cont-menu ul li:hover a{
+  color: #FF090C;
+}
+
+.active{
+  transform: translate(-600px);
+}
+.opacity{
+  background-color: rgba(0,0,0,0.5);
+  transition: all 1s ease;
 }
 
 .ItemListContainer{
   display: flex;
   margin-top: 1.25em;
+}
+
+.productList-body{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .product-container{
@@ -70,29 +142,3 @@
 .disabled{
   opacity: 85%;
 }
-/* 
-
-
-
-.Item-list{
-  list-style: none;
-  display: none;
-  position: absolute;
-  background-color: #FF090C;
-  line-height: 45px;
-  padding: 5px 15px;
-  border-radius: 30px;
-}
-.List-link:hover>a{
-  color: yellow;
-}
-
-.Link-order{
-  background-color: black;
-  padding: 7px 10px;
-  border-radius: 6px;
-}
-
-.Header-nav>.Nav-link:hover>.Item-list{
-  display:block;
-} */
