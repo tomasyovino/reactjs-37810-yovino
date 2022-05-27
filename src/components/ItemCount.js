@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import { Button } from '@material-ui/core';
+import { Add, Remove } from '@material-ui/icons';
+import { ProductAmountContainer, ProductAmount } from './StyledComponents';
 
 const ItemCount = ({stock, initial}) => {
     const [count, setCount] = useState(initial);
@@ -20,18 +23,17 @@ const ItemCount = ({stock, initial}) => {
     }
 
     return (
-        <div className='product-container'>
-            <div className='product-counter'>
-                <button className='counter-button' onClick={decrease}>-</button>
-                <p className='counter-p'>{count}</p>
-                <button className='counter-button' onClick={increment}>+</button>
-            </div>
-            {
-                stock
-                    ? <button className="btn-addToCart" onClick={() => onAdd(count)}>Agregar al carrito</button>
-                    : <button className="btn-addToCart disabled" disabled>Agregar al carrito</button>
-            }
-        </div>
+        <ProductAmountContainer>
+        <Button variant="text" onClick={increment}><Add /></Button>
+        <ProductAmount>{count}</ProductAmount>
+        <Button variant="text" onClick={decrease}><Remove /></Button>
+        {
+            stock
+            ? <Button variant="contained" color="primary" onClick={() => onAdd(count)}>Add to Cart</Button>
+            : <Button variant="contained" disabled>Add to Cart</Button>
+        }
+        
+        </ProductAmountContainer>
     );
 }
 
