@@ -1,4 +1,5 @@
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from "react-router-dom";
 
 const BurgerMenu = () => {   
     const iconMenu = () => {
@@ -12,11 +13,11 @@ const BurgerMenu = () => {
             <MenuIcon onClick={iconMenu} id="icon-menu" />
             <div className='cont-menu active' id="menu">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Hacer pedido</a></li>
-                    <li><a href="#">Nuestra historia</a></li>
-                    <li><a href="#">Preguntas Frecuentes</a></li>
-                    <li><a href="#">Contactanos</a></li>
+                    <li><Link to="/" className='Link'><p>Inicio</p></Link></li>
+                    <li><Link to="/" className='Link'><p>Hacer pedido</p></Link></li>
+                    <li><Link to="/" className='Link'><p>Nuestra historia</p></Link></li>
+                    <li><Link to="/" className='Link'><p>Preguntas Frecuentes</p></Link></li>
+                    <li><Link to="/" className='Link'><p>Contactanos</p></Link></li>
                 </ul>
             </div>
         </>

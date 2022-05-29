@@ -66,7 +66,6 @@ const Info = styled.div`
 `;
 
 const ProductContainer = styled.div`
-    flex: 1;
     margin: 5px;
     width: 300px;
     height: 350px;
@@ -74,6 +73,7 @@ const ProductContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     background-color: #FF090C;
     position: relative;
     &:hover ${Info}{
@@ -162,11 +162,20 @@ const Price  = styled.span`
     font-size: 40px;
 `;
 
+const MenuItem = styled.div`
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 25px;
+    color: white;
+    font-weight: bolder;
+`;
+
 export {
     Flex, Wrapper, Left, Center, Right, 
     ProductAmountContainer, ProductAmount, 
     ProductsContainer, Info, 
     ProductContainer, Title, 
     Image, Icon, TitleDetail,
-    DetailContainer, BuyingDetailContainer, HeadDetailInfoContainer, ImageDetail, InfoContainer, Desc, Price
+    DetailContainer, BuyingDetailContainer, HeadDetailInfoContainer, ImageDetail, InfoContainer, Desc, Price,
+    MenuItem
 };

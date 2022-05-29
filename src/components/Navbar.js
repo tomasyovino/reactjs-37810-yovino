@@ -1,7 +1,8 @@
 import logo from '../Assets/Images/logo.png';
 import CartWidget from './CartWidget';
+import { Link } from "react-router-dom";
 import { AppBar } from "@material-ui/core";
-import { Wrapper, Left, Center, Right } from './StyledComponents';
+import { Wrapper, Left, Center, Right, MenuItem } from './StyledComponents';
 import BurgerMenu from './BurgerMenu';
 
 const Navbar = () => {
@@ -10,10 +11,12 @@ const Navbar = () => {
             <Wrapper>
                 <Left>
                     <BurgerMenu />
-                    <a id="order-now" href="#">PEDIR YA</a>
+                    {/* <Link to="/" className='Link'><p id="order-now">PEDIR YA</p></Link> */}
+                    <Link to="/category/1" className='Link'><MenuItem>Pizzas</MenuItem></Link> {/* Enlaces temporales... Reposicionar y cambiar en un futuro */}
+                    <Link to="/category/2" className='Link'><MenuItem>Empanadas</MenuItem></Link> {/* Enlaces temporales... Reposicionar y cambiar en un futuro */}
                 </Left>
                 <Center>
-                    <img src={logo} alt='Logo' />
+                    <Link to="/" className='Link'><img src={logo} alt='Logo' /></Link>
                 </Center>
                 <Right>
                     <CartWidget />

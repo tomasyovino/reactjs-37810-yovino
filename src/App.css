@@ -7,8 +7,11 @@
   background-color: #FF090C !important;
 }
 
-#order-now{
+.Link{
   text-decoration: none;
+}
+
+#order-now{
   color: white;
   font-weight: bolder;
   background-color: black;
@@ -54,8 +57,7 @@
   border-bottom: white solid 3px;
 }
 
-.cont-menu ul li a{
-  text-decoration: none;
+.cont-menu ul li p{
   font-size: 25px;
   color: white;
   font-weight: bolder;
@@ -64,7 +66,7 @@
 .cont-menu ul li:hover{
   background-color: white;
 }
-.cont-menu ul li:hover a{
+.cont-menu ul li:hover p{
   color: #FF090C;
 }
 

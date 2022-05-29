@@ -2,6 +2,7 @@ import ItemCount from "./ItemCount";
 import { Flex, DetailContainer, BuyingDetailContainer, ImageDetail, InfoContainer, HeadDetailInfoContainer, TitleDetail, Desc, Price } from "./StyledComponents";
 
 const ItemDetail = ({item}) => {
+    
     const onAdd = (qty) => {
         alert ("Seleccionaste " + qty + " productos.");
     }
@@ -9,7 +10,7 @@ const ItemDetail = ({item}) => {
     return(
         <>
         {
-            item.image
+            item && item.image
             ? 
             <DetailContainer>
                 <InfoContainer>

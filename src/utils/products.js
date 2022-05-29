@@ -78,6 +78,54 @@ const products = [
             name: "Pizzas",
             id: 1
         }
+    },
+    {
+        id:35,
+        name: "Empanadas de J&Q",
+        stock: 100,
+        cost: 120,
+        description: "Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.",
+        image: [
+            "https://www.gourmet.cl/wp-content/uploads/2017/08/masa-horno-570x330.jpg"
+        ],
+        sales: 0,
+        categoryId: 2,
+        category: {
+            name: "Empanadas",
+            id: 2
+        }
+    },
+    {
+        id:36,
+        name: "Empanadas de Carne",
+        stock: 100,
+        cost: 120,
+        description: "Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.",
+        image: [
+            "https://www.gourmet.cl/wp-content/uploads/2017/08/masa-horno-570x330.jpg"
+        ],
+        sales: 0,
+        categoryId: 2,
+        category: {
+            name: "Empanadas",
+            id: 2
+        }
+    },
+    {
+        id:37,
+        name: "Empanadas de ??",
+        stock: 100,
+        cost: 120,
+        description: "Una empanada un tanto misteriosa... Parece ser una pizza, pero créele, es una empanada de lo más normal.",
+        image: [
+            "https://delivery.devenado.ar/IMG/pizza-jamonmorron-id5215_1-w640-h480-m1.jpg"
+        ],
+        sales: 0,
+        categoryId: 2,
+        category: {
+            name: "Empanadas",
+            id: 2
+        }
     }
 ];
 
