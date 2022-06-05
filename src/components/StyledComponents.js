@@ -29,7 +29,7 @@ const Right = styled.div`
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-around;
 `;
 
 const ProductAmountContainer = styled.div`
@@ -70,6 +70,7 @@ const ProductContainer = styled.div`
     width: 300px;
     height: 350px;
     border-radius: 6px;
+    box-shadow: 9px 6px 5px 0px rgba(0,0,0,0.39);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,6 +171,22 @@ const MenuItem = styled.div`
     font-weight: bolder;
 `;
 
+const SearchContainer = styled.div`
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    padding: 5px;
+`;
+
+const Input = styled.input`
+    margin-right: 5px;
+    padding: 3px;
+    border: none;
+    outline: none;
+`;
+
 export {
     Flex, Wrapper, Left, Center, Right, 
     ProductAmountContainer, ProductAmount, 
@@ -177,5 +194,5 @@ export {
     ProductContainer, Title, 
     Image, Icon, TitleDetail,
     DetailContainer, BuyingDetailContainer, HeadDetailInfoContainer, ImageDetail, InfoContainer, Desc, Price,
-    MenuItem
+    MenuItem, SearchContainer, Input
 };

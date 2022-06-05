@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { AppBar } from "@material-ui/core";
 import { Wrapper, Left, Center, Right, MenuItem } from './StyledComponents';
 import BurgerMenu from './BurgerMenu';
+import SearchForm from './SearchForm';
 
 const Navbar = () => {
     return (
@@ -19,6 +20,7 @@ const Navbar = () => {
                     <Link to="/" className='Link'><img src={logo} alt='Logo' /></Link>
                 </Center>
                 <Right>
+                    <SearchForm />
                     <CartWidget />
                 </Right>
             </Wrapper>
