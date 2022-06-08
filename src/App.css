@@ -12,6 +12,10 @@
   text-decoration: none;
 }
 
+.ShoppingCart{
+  color: white;
+}
+
 #order-now{
   color: white;
   font-weight: bolder;

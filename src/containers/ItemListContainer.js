@@ -1,4 +1,3 @@
-import ItemCount from "../components/ItemCount";
 import ItemList from "../components/ItemList"
 import customFetch from "../utils/customFetch";
 import { useEffect, useState } from "react";
@@ -18,14 +17,9 @@ const ItemListContainer = () => {
             .catch(err => console.log(err))
     }, [data]);
 
-    const onAdd = (qty) => {
-        alert ("Seleccionaste " + qty + " productos.");
-    }
-
     return (
         <>
             <ItemList items={data}/>
-            <ItemCount stock={5} initial={1} onAdd={onAdd} />
         </>
     );
 }

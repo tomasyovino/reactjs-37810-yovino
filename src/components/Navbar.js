@@ -21,7 +21,7 @@ const Navbar = () => {
                 </Center>
                 <Right>
                     <SearchForm />
-                    <CartWidget />
+                    <Link to="/cart" className='Link'><CartWidget /></Link>
                 </Right>
             </Wrapper>
         </AppBar>
