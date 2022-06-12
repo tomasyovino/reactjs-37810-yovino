@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-// Hoy no hay meme :c
 export const CartContext = createContext();
 
 const CartContextProvider = ({ children }) => {

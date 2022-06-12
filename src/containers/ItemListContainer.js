@@ -2,6 +2,8 @@ import ItemList from "../components/ItemList"
 import customFetch from "../utils/customFetch";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import db from "../utils/firebaseConfig";
+import { collection, getDocs } from "firebase/firestore";
 const { products } = require('../utils/products');
 
 const ItemListContainer = () => {
