@@ -13,8 +13,8 @@ const Navbar = () => {
                 <Left>
                     <BurgerMenu />
                     {/* <Link to="/" className='Link'><p id="order-now">PEDIR YA</p></Link> */}
-                    <Link to="/category/1" className='Link'><MenuItem>Pizzas</MenuItem></Link> {/* Enlaces temporales... Reposicionar y cambiar en un futuro */}
-                    <Link to="/category/2" className='Link'><MenuItem>Empanadas</MenuItem></Link> {/* Enlaces temporales... Reposicionar y cambiar en un futuro */}
+                    <Link to="/category/MbCjgT1qxGT28TQHIDxs" className='Link'><MenuItem>Pizzas</MenuItem></Link> {/* Enlaces temporales... Reposicionar y cambiar en un futuro */}
+                    <Link to="/category/WuwoOSINFxcXZiKm3R1x" className='Link'><MenuItem>Empanadas</MenuItem></Link> {/* Enlaces temporales... Reposicionar y cambiar en un futuro */}
                 </Left>
                 <Center>
                     <Link to="/" className='Link'><img src={logo} alt='Logo' /></Link>

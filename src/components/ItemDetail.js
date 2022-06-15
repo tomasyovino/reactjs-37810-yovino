@@ -23,7 +23,7 @@ const ItemDetail = ({item}) => {
             <DetailContainer>
                 <InfoContainer>
                     <HeadDetailInfoContainer>
-                        <ImageDetail src={item.image[0]} />
+                        <ImageDetail src={item.image} />
                         <TitleDetail>{item.name}</TitleDetail>
                     </HeadDetailInfoContainer>
                     <Desc>{item.description}</Desc>

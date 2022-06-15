@@ -3,13 +3,19 @@ import { ShoppingCartOutlined } from "@material-ui/icons";
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 
-const CartWidget = () => {
+const CartWidget = ({condition}) => {
     const context = useContext(CartContext);
-
+    condition = context.calcItemsQty();
     return (
-        <Badge badgeContent={context.calcItemsQty()} color="secondary">
-            <ShoppingCartOutlined className="ShoppingCart" />
-        </Badge>
+        <>
+        {
+            condition !== 0
+            ?   <Badge badgeContent={condition} color= "secondary">
+                    <ShoppingCartOutlined className="ShoppingCart" />
+                </Badge>
+            : <></>
+        }
+        </>
     );
 }
 
