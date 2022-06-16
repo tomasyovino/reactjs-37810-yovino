@@ -43,11 +43,19 @@ const ProductAmount = styled.div`
     margin: 5px;
 `;
 
+const MainProductsContainer = styled.div`
+    background-image: linear-gradient(white, #fbb713);
+    min-height: 100vh;
+    display:flex;
+    justify-content: end;
+`;
+
 const ProductsContainer = styled.div`
+    width: 80%;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
 `;
 
 const Info = styled.div`
@@ -66,16 +74,24 @@ const Info = styled.div`
 `;
 
 const ProductContainer = styled.div`
+    height: 362px;
     margin: 5px;
-    width: 300px;
-    height: 350px;
+    padding: 5px;
+    border: solid 1px #fbb713;
     border-radius: 6px;
     box-shadow: 9px 6px 5px 0px rgba(0,0,0,0.39);
+    background-color: #FF090C;
+`;
+
+const BorderProductContainer = styled.div`
+    width: 300px;
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #FF090C;
+    border: double 3px #fbb713;
+    border-radius: 6px;
     position: relative;
     &:hover ${Info}{
         opacity: 1;
@@ -97,7 +113,7 @@ const Image = styled.img`
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-color: #FF090C;
+    background-color: transparent;
     position: absolute;
     z-index: 2;
 `;
@@ -106,14 +122,16 @@ const Icon = styled.div`
     font-size: 12px;
     width: 100px;
     height: 40px;
-    background-color: white;
+    color: white;
+    background-color: #FF090C;
+    border: double 3px #fbb713;
+    border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin: 10px;
     transition: all 0.5s ease;
     &:hover {
-        background-color: #e9f5f5;
         transform: scale(1.3);
     }
 `;
@@ -123,6 +141,9 @@ const DetailContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: linear-gradient(#FF090C, #fbb713);
+    background-size: contain;
+    background-position: fixed;
 `;
 
 const HeadDetailInfoContainer = styled.div`
@@ -139,8 +160,12 @@ const ImageDetail = styled.img`
 
 const InfoContainer = styled.div`
     flex: 1;
-    padding: 0px 50px;
-    width: 655px;
+    padding: 25px 50px;
+    max-width: 655px;
+    border-left: double 3px white;
+    border-right: double 3px white;
+    border-radius: 30px;
+    background-color: white;
 `;
 
 const TitleDetail = styled.div`
@@ -161,6 +186,20 @@ const BuyingDetailContainer = styled.div`
 const Price  = styled.span`
     font-weight: 100;
     font-size: 40px;
+`;
+
+const MenuItemContainer = styled.div`
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    top: 115px;
+    left: 20px;
+    padding: 25px 75px 50px 25px;
+    background-color: #FF090C;
+    border: double 3px #fbb713;
+    border-radius: 6px;
+    box-shadow: 9px 6px 5px 0px rgba(0,0,0,0.39);
 `;
 
 const MenuItem = styled.div`
@@ -198,10 +237,12 @@ const TopButton = styled.button`
   padding: 10px;
   font-weight: 600;
   cursor: pointer;
+  color: white;
   border: ${(props) => props.type === "filled" && "none"};
   background-color: ${(props) =>
-    props.type === "filled" ? "black" : "transparent"};
-  color: ${(props) => props.type === "filled" && "white"};
+    props.type === "filled" ? "#FF090C" : "transparent"};
+  border:solid 1px white;
+  border-radius: 6px;
 `;
 
 const TopText = styled.span`
@@ -223,7 +264,7 @@ const InfoCart = styled.div`
 
 const Summary = styled.div`
   flex: 1;
-  border: 0.5px solid lightgray;
+  border: 3px double white;
   border-radius: 10px;
   padding: 20px;
   height: 50vh;
@@ -251,9 +292,13 @@ const Button = styled.button`
   background-color: black;
   color: white;
   font-weight: 600;
+  border-radius: 6px;
 `;
 
 const WrapperCart = styled.div`
+    min-height: 100vh;
+    background-color: #FF090C;
+    color: white;
     padding: 20px
 `;
 
@@ -271,6 +316,9 @@ const ContentCart = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-right: 5px;
+  padding-bottom: 3px;
+  border-bottom: solid 1px white;
 `;
 
 const ProductDetail = styled.div`
@@ -279,9 +327,11 @@ const ProductDetail = styled.div`
 `;
 
 const ImageCart = styled.img`
-  border-radius: 3px;
   width: 200px;
   height: 150px;
+  background-color: white;
+  border: solid 1px white;
+  border-radius: 30px;
 `;
 
 const Details = styled.div`
@@ -308,10 +358,10 @@ const ProductPrice = styled.div`
 export {
     Flex, Wrapper, Left, Center, Right, 
     ProductAmountContainer, ProductAmount, 
-    ProductsContainer, Info, 
-    ProductContainer, Title, 
+    ProductsContainer, MainProductsContainer, Info, 
+    ProductContainer, BorderProductContainer, Title, 
     Image, Icon, TitleDetail,
     DetailContainer, BuyingDetailContainer, HeadDetailInfoContainer, ImageDetail, InfoContainer, Desc, Price,
-    MenuItem, SearchContainer, Input,
+    MenuItemContainer, MenuItem, SearchContainer, Input,
     Top, TopButton, WrapperCart, TopText, Bottom, InfoCart, Summary, SummaryTitle, SummaryItem, SummaryItemText, SummaryItemPrice, Button, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice
 };

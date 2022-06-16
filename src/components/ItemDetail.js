@@ -16,11 +16,11 @@ const ItemDetail = ({item}) => {
     }
 
     return(
-        <>
+        <DetailContainer>
         {
             item && item.image
             ? 
-            <DetailContainer>
+            
                 <InfoContainer>
                     <HeadDetailInfoContainer>
                         <ImageDetail src={item.image} />
@@ -39,10 +39,13 @@ const ItemDetail = ({item}) => {
                         }
                     </BuyingDetailContainer>
                 </InfoContainer>
-            </DetailContainer>
-            : <p>Cargando...</p>
+            
+            : <div className="loader-container">
+                <div className="loader"></div>
+                <div className="loader2"></div>
+              </div>
         }
-        </>
+        </DetailContainer>
     );
 }
 
