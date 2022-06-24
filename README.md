@@ -37,6 +37,11 @@ Pueden eliminarse todos los productos a la vez o de forma individual, seguir com
 El botón "Seguir comprando" devuelve al usuario a la tienda de productos.  
 Una vez seleccionados los productos deseados, click en "Comprar" para realizar la orden.
 
+## ¿Demasiado texto?
+Observa un ejemplo guíado en el siguiente gif:  
+
+![¡Ups! Algo no ha salido como esperaba](./src/assets/gifs/appExecutionGif.gif)
+
 # Construido con
 
 - ### `ReactJS` - Framework utilizado. [Más información.](https://es.reactjs.org)
