@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import homeImage from "../assets/images/homeImage.webp";
 
 const Flex = styled.div`
     flex: 1;
@@ -355,6 +356,53 @@ const ProductPrice = styled.div`
   font-weight: 200;
 `;
 
+const HomeContent = styled.div`
+    min-height:100vh;
+    background-color: #FF090C;
+    display: flex;
+    justify-content: center;
+    overflow:hidden;
+`;
+
+const HomeLeft = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 100px;
+    color: white;
+`;
+
+const HomeRight = styled.div`
+    width: 100%;
+    min-height:80vh;
+    border-radius: 0 0 0 100%;
+    border-left: 30px solid white;
+    background-image: url(${homeImage});
+    background-size: contain;
+`;
+
+const HomeTitle = styled.h2`
+    font-size: 42px;
+    font-weight: bold;
+`;
+
+const HomeTitleDescription = styled.span`
+    font-size: 24px;
+    font-weight: lighter;
+`;
+
+const HomeButton = styled.button`
+    cursor: pointer;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    border-radius:30px;
+    font-weight: 600;
+`;
+
 export {
     Flex, Wrapper, Left, Center, Right, 
     ProductAmountContainer, ProductAmount, 
@@ -363,5 +411,6 @@ export {
     Image, Icon, TitleDetail,
     DetailContainer, BuyingDetailContainer, HeadDetailInfoContainer, ImageDetail, InfoContainer, Desc, Price,
     MenuItemContainer, MenuItem, SearchContainer, Input,
-    Top, TopButton, WrapperCart, TopText, Bottom, InfoCart, Summary, SummaryTitle, SummaryItem, SummaryItemText, SummaryItemPrice, Button, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice
+    Top, TopButton, WrapperCart, TopText, Bottom, InfoCart, Summary, SummaryTitle, SummaryItem, SummaryItemText, SummaryItemPrice, Button, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice,
+    HomeContent, HomeLeft, HomeRight, HomeTitle, HomeTitleDescription, HomeButton
 };

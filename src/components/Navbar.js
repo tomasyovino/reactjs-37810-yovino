@@ -1,4 +1,4 @@
-import logo from '../Assets/Images/logo.png';
+import logo from '../assets/images/logo.png';
 import CartWidget from './CartWidget';
 import { Link } from "react-router-dom";
 import { AppBar } from "@material-ui/core";

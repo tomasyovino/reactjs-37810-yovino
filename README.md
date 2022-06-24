@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Proyecto aplicación web - Pizzeria Tomatito
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto web e-commerce, orientada a la venta de comida rápida específica. Facilita la experiencia de usuario posibilitando la compra de productos al local de forma online, proporciona un sitio tan intuitivo como estético. 
 
-## Available Scripts
+# Comenzando
 
-In the project directory, you can run:
+Accede al **[repositorio github](https://github.com/tomasyovino/reactjs-37810-yovino.git)** para obtener el código del proyecto.
 
-### `npm start`
+Proyecto desplegado en **[Vercel](https://vercel.com/dashboard)**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Pre-requisitos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Instala **NodeJs** [Aquí](https://phoenixnap.com/kb/install-node-js-npm-on-windows)
 
-### `npm test`
+Y **[Git](https://git-scm.com/downloads)**.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Una vez instalados los componentes, crea la aplicación React. Si no sabes como hacerlo, [sigue estos pasos](https://create-react-app.dev/docs/getting-started).
 
-### `npm run build`
+# Ejecución
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+La aplicación se divide en cuatro secciones funcionales; [Inicio](https://tomatito-delta.vercel.app), [Tienda de productos](https://tomatito-delta.vercel.app/order-now), [Detalles del producto](https://tomatito-delta.vercel.app/item/oq48XBo6zoCWKdpBVHMJ) y [Carrito](https://tomatito-delta.vercel.app/cart).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ### `Inicio`
+La sección principal del sitio. Cumple con una función estética y publicitaria. Además, es el nexo entre todas las secciones. Click en "Pedir ahora" para continuar.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ### `Tienda de productos`
+Sección que muestra y presta acceso a los productos de la tienda. Los productos están distribuidos por categorías claramente identificables en el contenedor de la izquierda, elije una categoría para mostrar los productos pertenecientes.  
+Posiciona el ratón en el producto deseado y click en "Detalles" para continuar.
 
-### `npm run eject`
+- ### `Detalles del producto`
+Aquí podrás ver los detalles de los productos y añadirlos al carrito. Para hacerlo, primero calibra la cantidad de unidades deseada, haciendo click en los botones "+" y "-". Luego click en "Añadir al carrito".  
+Una vez haya productos en el carrito se habilitarán dos nuevos botones, uno en la barra de navegación y el otro en los detalles del producto. Ambos permiten el acceso al carrito. Click en cualquiera de ellos para continuar.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- ### `Carrito`
+Ésta sección muestra el carrito, funciona como último procedimiento, permitiendo hacer modificaciones, indicando los detalles de las mismas y calculando el precio total.  
+Pueden eliminarse todos los productos a la vez o de forma individual, seguir comprando o comprar. De no haber productos en carrito, muestra un string "Tu carrito está vacío".
+El botón "Seguir comprando" devuelve al usuario a la tienda de productos.  
+Una vez seleccionados los productos deseados, click en "Comprar" para realizar la orden.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Construido con
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- ### `ReactJS` - Framework utilizado. [Más información.](https://es.reactjs.org)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- ### `React Router DOM` - Permite el despliegue de rutas. [Más información.](https://www.npmjs.com/package/react-router-dom)
 
-## Learn More
+- ### `Styled Components` - Librería de modelaje, usa ES6 y CSS. [Más información.](https://styled-components.com)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- ### `Material UI` - Útiles y componente. [Más información.](https://mui.com)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- ### `Firebase` - API a la que consulta. [Más información.](https://firebase.google.com/products/firestore?hl=es-419&gclid=CjwKCAjwwdWVBhA4EiwAjcYJEBrqwLcOxqiU4lvPLuCG6ZYJ340pbmPp1xTR-1K189EIv1PctH9oTBoCgZEQAvD_BwE&gclsrc=aw.ds)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Autor
+- ### **Yovino, Tomás Alessandro** - Trabajo inicial - [tomyov](https://github.com/tomasyovino)
